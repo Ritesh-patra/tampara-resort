@@ -34,7 +34,8 @@
             --light: #f5f7fa;
         }
 
-        body,html {
+        body,
+        html {
             width: 100%;
             overflow-x: hidden;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -269,7 +270,6 @@
 
     </section>
 
-
     <!-- About Section -->
     <section id="about" class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
         <div class="max-w-6xl mx-auto px-4">
@@ -282,23 +282,33 @@
                     <img src="images/about.png" alt="Resort exterior" class="rounded-2xl shadow-2xl" loading="lazy">
                 </div>
                 <div class="about-content">
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Tampara Resort is a luxurious beachfront destination offering world-class amenities and
-                        personalized service. With 50 years of hospitality excellence, we've created a sanctuary where
-                        every guest experiences unforgettable moments.
+                    <p class="text-lg text-gray-700 mb-6 leading-normal text-justify">
+                        The resort in Tampara is a division of Rajarani. It starts operating in 2018. We have always
+                        believed in providing the greatest service to our customers, which is why we are currently
+                        regarded as one of the top resorts in Ganjam, Odisha. We have everything you need for all of
+                        your needs, whether it is the breath taking view of Tampara Lake, the renowned rooftop dining
+                        experience, the enormous swimming pool for a deep diving adventure, or the large banquet space.
+                        When you order a service from us, we’ll handle everything. Bring your family to Tampa Resort!
+                        The place to go when travelling.
                     </p>
-                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
-                        Our prime location on pristine white sand beaches, combined with our award-winning restaurants
-                        and comprehensive wellness facilities, makes us the ideal choice for romantic getaways, family
-                        vacations, and corporate retreats.
+
+                    <p class="text-lg text-gray-700 mb-6 leading-normal text-justify">
+                        Our prime location on the serene shores of Tampara Lake, paired with our renowned dining
+                        experiences and
+                        wide-ranging wellness facilities, makes us the perfect destination for romantic escapes, family
+                        vacations, and
+                        corporate gatherings. With exceptional service and thoughtfully designed spaces, we ensure every
+                        moment becomes a
+                        memorable experience.
                     </p>
+
                     <div class="grid grid-cols-3 gap-4 py-8">
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600">500+</div>
+                            <div class="text-4xl font-bold text-blue-600">40+</div>
                             <p class="text-gray-600 text-sm">Rooms & Suites</p>
                         </div>
                         <div class="text-center">
-                            <div class="text-4xl font-bold text-orange-500">8</div>
+                            <div class="text-4xl font-bold text-orange-500">1</div>
                             <p class="text-gray-600 text-sm">Restaurants</p>
                         </div>
                         <div class="text-center">
@@ -312,7 +322,7 @@
     </section>
 
     <!-- Wedding Section -->
-    <section id="wedding" class="py-24 md:py-36 bg-gradient-to-r from-pink-50 to-red-50">
+    <section id="wedding" class="py-5 md:py-36 bg-gradient-to-r from-pink-50 to-red-50">
         <div class="max-w-7xl mx-auto px-4">
 
             <div class="text-center mb-20">
@@ -328,15 +338,20 @@
 
             <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
 
-                <div class="wedding-images space-y-6" data-gsap-target="left-wedding-img">
-                    <img src="images/weding.png" alt="Wedding Setup"
-                        class="rounded-3xl shadow-2xl w-full border-4 border-white transition duration-500 hover:scale-[1.02]"
-                        loading="lazy">
-                    <img src="https://i.pinimg.com/736x/6d/93/32/6d9332810c8fda1687a715046be474c3.jpg"
-                        alt="Wedding Decoration"
-                        class="rounded-3xl shadow-xl h-[60vh] w-full object-cover object-bottom transition duration-500 hover:scale-[1.02]"
-                        loading="lazy">
+                <div class="wedding-videos grid grid-cols-1 gap-6" data-gsap-target="left-wedding-img">
+
+                    <!-- Video 1 -->
+                    <video src="videos/wedding1.mp4" controls autoplay muted
+                        class="rounded-3xl shadow-2xl w-full h-[55vh] object-cover border-4 border-white transition duration-500 hover:scale-[1.02]">
+                    </video>
+
+                    <!-- Video 2 -->
+                    <video src="videos/wedding2.mp4" controls autoplay muted
+                        class="rounded-3xl shadow-xl w-full h-[55vh] object-cover object-center transition duration-500 hover:scale-[1.02]">
+                    </video>
+
                 </div>
+
 
                 <div class="wedding-content space-y-8" data-gsap-target="right-wedding-content">
 
@@ -571,7 +586,7 @@
                     class="bg-white/10 backdrop-blur-md rounded-xl p-8 text-white text-center card-hover hover:bg-white/20 transition">
                     <i class="ri-fire-line text-5xl mb-4 text-red-300"></i>
                     <h3 class="text-2xl font-bold mb-3">Night Life</h3>
-                    <p class="text-white/90">Live music and beachfront entertainment.</p>
+                    <p class="text-white/90">Live music and lakeside entertainment.</p>
                 </div>
 
                 <div
@@ -617,36 +632,36 @@
             <div class="swiper diningSwiper">
                 <div class="swiper-wrapper">
 
-                    <!-- Odisha Thali -->
+                    <!-- mushroom -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1600628422011-19f04e6a74e0?w=400&h=300&fit=crop"
-                                class="w-full h-64 object-cover" alt="Odia Thali">
+                            <img src="https://i.pinimg.com/1200x/48/75/9a/48759a8f60d30d2201f450f3e92634bb.jpg"
+                                class="w-full h-80 lg:h-64 object-cover" alt="Garlic Butter Mushroom">
                             <div class="p-6">
-                                <h3 class="text-2xl font-bold text-dark mb-2">Authentic Odia Thali</h3>
-                                <p class="text-gray-600 mb-4">A traditional platter with Dalma, Besara, Pakhala, Kanika
-                                    & more.</p>
+                                <h3 class="text-2xl font-bold text-dark mb-2">Garlic Butter Mushrooms</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Juicy button mushrooms sautéed in rich butter, roasted garlic,
+                                    fresh herbs and a touch of pepper — served hot and aromatic.
+                                </p>
                                 <div class="flex items-center justify-between">
-                                    <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.9/5</span>
-                                    <button
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Reserve</button>
+                                    <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.8/5</span>
                                 </div>
                             </div>
                         </div>
                     </div>
 
+
                     <!-- Fish Curry -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1604909052743-82a3a1cc403b?w=400&h=300&fit=crop"
-                                class="w-full h-64 object-cover" alt="Fish Curry">
+                            <img src="https://i.pinimg.com/1200x/9f/f2/dc/9ff2dc7fa62161ee1c9e278db3680263.jpg"
+                                class="w-full h-80 lg:h-64 object-cover" alt="Fish Curry">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Odia Fish Curry</h3>
                                 <p class="text-gray-600 mb-4">Fresh lake fish cooked in spicy mustard-based gravy.</p>
                                 <div class="flex items-center justify-between">
                                     <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.8/5</span>
-                                    <button
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Reserve</button>
+
                                 </div>
                             </div>
                         </div>
@@ -656,20 +671,58 @@
                     <!-- Mutton Kassa -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://images.unsplash.com/photo-1604908177590-fe6f98eac0bc?w=400&h=300&fit=crop"
-                                class="w-full h-64 object-cover" alt="Mutton Kassa">
+                            <img src="https://i.pinimg.com/736x/e9/a5/92/e9a592bc11a55224937245014387e1d0.jpg"
+                                class="w-full h-80 lg:h-64 object-cover" alt="Mutton Kassa">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Mutton Kassa</h3>
                                 <p class="text-gray-600 mb-4">Slow-cooked spicy Odia-style mutton with rich flavours.
                                 </p>
                                 <div class="flex items-center justify-between">
                                     <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.7/5</span>
-                                    <button
-                                        class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Reserve</button>
+
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- veg biryani -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://i.pinimg.com/1200x/40/bc/a4/40bca44d0212d40a573e69b6cc737f9d.jpg"
+                                class="w-full h-80 lg:h-64 object-cover" alt="Veg Biryani">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Veg Biryani</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Aromatic basmati rice cooked with fresh vegetables, saffron,
+                                    mint, and traditional Odisha-style spices for a rich and flavorful experience.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.7/5</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- chicken biryani -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                            <img src="https://i.pinimg.com/1200x/1a/59/f0/1a59f0e988c227075ce7a6e261f9f362.jpg"
+                                class="w-full h-80 lg:h-64 object-cover" alt="Chicken Biryani">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold text-dark mb-2">Chicken Dum Biryani</h3>
+                                <p class="text-gray-600 mb-4">
+                                    Tender marinated chicken slow-cooked with fragrant basmati rice,
+                                    caramelized onions, ghee, and bold spices — a classic favorite.
+                                </p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-yellow-500 text-lg"><i class="ri-star-fill"></i> 4.8/5</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
 
@@ -689,7 +742,7 @@
                 <div class="w-24 h-1.5 bg-gradient-to-r from-[#0B4799] to-[#FE7303] mx-auto rounded-full"></div>
                 <p class="text-lg text-gray-700 mt-6 max-w-2xl mx-auto">
                     Discover amazing attractions and natural beauty surrounding our resort, from ancient shrines to
-                    serene beaches.
+                    serene lake.
                 </p>
             </div>
 
@@ -1088,7 +1141,7 @@
                     <div
                         class="w-full h-96 bg-gray-200 rounded-xl overflow-hidden shadow-2xl mb-8 border border-gray-300">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3744.1557996328453!2d84.9785507!3d20.1983088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a21641031c6a655%3A0xe54e2079f8266474!2sTampara%20Lake!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.1592793339905!2d85.00870411023911!3d19.36225474284923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a17fda72d3bf701%3A0xd5396952b0f8f158!2sTampara%20Resort!5e0!3m2!1sen!2sin!4v1764738587882!5m2!1sen!2sin"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -1164,7 +1217,7 @@
                         <i class="ri-palm-tree-line text-3xl text-blue-300"></i>
                         <span class="text-2xl font-bold text-blue-200">Tampara</span>
                     </div>
-                    <p class="text-gray-400">Luxury beachfront resort for unforgettable vacations.</p>
+                    <p class="text-gray-400">Luxury Lakeside resort for unforgettable vacations.</p>
                 </div>
 
                 <div>
@@ -1181,7 +1234,6 @@
                     <h4 class="text-xl font-bold mb-4 text-blue-300">Services</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="#wedding" class="hover:text-blue-400 transition">Wedding Events</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">Events & Celebrations</a></li>
                         <li><a href="#amenities" class="hover:text-blue-400 transition">Amenities</a></li>
                         <li><a href="#places" class="hover:text-blue-400 transition">Nearby Attractions</a></li>
                     </ul>
@@ -1190,13 +1242,11 @@
                 <div>
                     <h4 class="text-xl font-bold mb-4 text-blue-300">Follow Us</h4>
                     <div class="flex space-x-4 text-gray-400">
-                        <a href="#" class="text-2xl hover:text-blue-400 transition"><i
-                                class="ri-facebook-circle-line"></i></a>
-                        <a href="#" class="text-2xl hover:text-blue-400 transition"><i
-                                class="ri-twitter-x-line"></i></a>
-                        <a href="#" class="text-2xl hover:text-blue-400 transition"><i
-                                class="ri-instagram-line"></i></a>
-                        <a href="#" class="text-2xl hover:text-blue-400 transition"><i class="ri-youtube-line"></i></a>
+                        <a href="https://www.facebook.com/tampararesort"
+                            class="text-2xl hover:text-blue-400 transition"><i class="ri-facebook-circle-line"></i></a>
+
+                        <a href="https://www.instagram.com/tampararesort/"
+                            class="text-2xl hover:text-blue-400 transition"><i class="ri-youtube-line"></i></a>
                     </div>
                 </div>
 
@@ -1420,7 +1470,7 @@ Please confirm availability and send further details.`;
 
             // Encode for WhatsApp
             const encodedMessage = encodeURIComponent(message);
-            const whatsappLink = `https://wa.me/1234567890?text=${encodedMessage}`;
+            const whatsappLink = `https://wa.me/9124084003?text=${encodedMessage}`;
 
             // Open WhatsApp
             window.open(whatsappLink, '_blank');
@@ -1520,18 +1570,18 @@ Please confirm availability and send further details.`;
             ease: "power2.out"
         });
 
-          var diningSwiper = new Swiper(".diningSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 20,
-        breakpoints: {
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    });
+        var diningSwiper = new Swiper(".diningSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
     </script>
 </body>
 
