@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tampara Resort - Luxury Beachfront Retreat</title>
+    <title>Tampara Resort - Lakeside Luxury Resort</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -192,14 +192,25 @@
         .modal.active {
             display: flex;
         }
+
+        /* Desktop only */
+        @media (min-width: 768px) {
+            .mobile-only {
+                display: none;
+            }
+        }
+
+        /* Mobile only */
+        @media (max-width: 767px) {
+            .heroSwiper {
+                height: 100vh;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-white">
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-spinner"></div>
-    </div>
+
 
     <!-- Mobile Menu Overlay -->
     <div class="fixed inset-0 bg-black/50 mobile-menu-overlay hidden z-40" id="menuOverlay"></div>
@@ -228,10 +239,10 @@
     <!-- Navigation -->
     <header class="sticky top-0 z-40 bg-white shadow-md">
         <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-cente ">
-                <img src="images/logo.png" alt="Tampara Logo" class="h-12 w-60  object-contain">
+            <div class="flex items-center">
+                <img loading="lazy" src="images/logo.png" alt="Tampara Logo" class="h-12 w-60  object-contain">
             </div>
-
+            `
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
@@ -261,14 +272,40 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-parallax relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative h-[80vh] lg:h-screen w-full overflow-hidden">
 
-        <!-- Fullscreen Background Video -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-            <source src="videos/hero.MP4" type="video/mp4">
-        </video>
+        <div class="swiper heroSwiper h-full">
+            <div class="swiper-wrapper">
+
+                <!-- Desktop images -->
+                <div class="swiper-slide">
+                    <img loading="lazy" src="images/new hero1.JPG" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy" src="images/new hero 2.JPG" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide">
+                    <img loading="lazy" src="images/new hero 3.JPG" class="w-full h-full object-cover">
+                </div>
+           
+
+                <!-- Mobile images -->
+                <div class="swiper-slide mobile-only">
+                    <img loading="lazy" src="images/new hero1.JPG" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide mobile-only">
+                    <img loading="lazy" src="images/new hero 2.JPG" class="w-full h-full object-cover">
+                </div>
+                <div class="swiper-slide mobile-only">
+                    <img loading="lazy" src="images/new hero 3.JPG" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
 
     </section>
+
 
     <!-- About Section -->
     <section id="about" class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
@@ -279,7 +316,8 @@
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="about-image">
-                    <img src="images/about.png" alt="Resort exterior" class="rounded-2xl shadow-2xl" loading="lazy">
+                    <img loading="lazy" src="images/about.png" alt="Resort exterior" class="rounded-2xl shadow-2xl"
+                        loading="lazy">
                 </div>
                 <div class="about-content">
                     <p class="text-lg text-gray-700 mb-6 leading-normal text-justify">
@@ -444,7 +482,7 @@
                     class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-blue-200 transition duration-700 group">
 
                     <div class="relative">
-                        <img src="images/executive.png"
+                        <img loading="lazy" src="images/executive.png"
                             class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition duration-700"
                             alt="Executive Room">
                         <div
@@ -498,7 +536,7 @@
                     class="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-orange-200 transition duration-700 group">
 
                     <div class="relative">
-                        <img src="images/premium.png"
+                        <img loading="lazy" src="images/premium.png"
                             class="w-full h-64 sm:h-72 object-cover group-hover:scale-105 transition duration-700"
                             alt="Premium Room">
                         <div
@@ -635,7 +673,8 @@
                     <!-- mushroom -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://i.pinimg.com/1200x/48/75/9a/48759a8f60d30d2201f450f3e92634bb.jpg"
+                            <img loading="lazy"
+                                src="https://i.pinimg.com/1200x/48/75/9a/48759a8f60d30d2201f450f3e92634bb.jpg"
                                 class="w-full h-80 lg:h-64 object-cover" alt="Garlic Butter Mushroom">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Garlic Butter Mushrooms</h3>
@@ -654,7 +693,8 @@
                     <!-- Fish Curry -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://i.pinimg.com/1200x/9f/f2/dc/9ff2dc7fa62161ee1c9e278db3680263.jpg"
+                            <img loading="lazy"
+                                src="https://i.pinimg.com/1200x/9f/f2/dc/9ff2dc7fa62161ee1c9e278db3680263.jpg"
                                 class="w-full h-80 lg:h-64 object-cover" alt="Fish Curry">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Odia Fish Curry</h3>
@@ -671,7 +711,8 @@
                     <!-- Mutton Kassa -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://i.pinimg.com/736x/e9/a5/92/e9a592bc11a55224937245014387e1d0.jpg"
+                            <img loading="lazy"
+                                src="https://i.pinimg.com/736x/e9/a5/92/e9a592bc11a55224937245014387e1d0.jpg"
                                 class="w-full h-80 lg:h-64 object-cover" alt="Mutton Kassa">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Mutton Kassa</h3>
@@ -688,7 +729,8 @@
                     <!-- veg biryani -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://i.pinimg.com/1200x/40/bc/a4/40bca44d0212d40a573e69b6cc737f9d.jpg"
+                            <img loading="lazy"
+                                src="https://i.pinimg.com/1200x/40/bc/a4/40bca44d0212d40a573e69b6cc737f9d.jpg"
                                 class="w-full h-80 lg:h-64 object-cover" alt="Veg Biryani">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Veg Biryani</h3>
@@ -707,7 +749,8 @@
                     <!-- chicken biryani -->
                     <div class="swiper-slide">
                         <div class="bg-white rounded-xl overflow-hidden shadow-lg">
-                            <img src="https://i.pinimg.com/1200x/1a/59/f0/1a59f0e988c227075ce7a6e261f9f362.jpg"
+                            <img loading="lazy"
+                                src="https://i.pinimg.com/1200x/1a/59/f0/1a59f0e988c227075ce7a6e261f9f362.jpg"
                                 class="w-full h-80 lg:h-64 object-cover" alt="Chicken Biryani">
                             <div class="p-6">
                                 <h3 class="text-2xl font-bold text-dark mb-2">Chicken Dum Biryani</h3>
@@ -750,7 +793,7 @@
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/taratarini.jpg" alt="Taratarini Temple"
+                    <img loading="lazy" src="images/taratarini.jpg" alt="Taratarini Temple"
                         class="w-full h-48 object-cover group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -761,15 +804,15 @@
                             Purnagiri or Kumari hills near Berhampur city in Ganjam district of Odisha. Purnesvari Maa
                             Tara Tarini on Purnagiri hills is worshiped as the Breast Shrine of Adi Shakti.
                         </p>
-                        <p class="text-sm text-red-600 font-semibold mb-4"><i class="ri-map-pin-line"></i> Near
-                            Berhampur City</p>
+                        <p class="text-sm text-red-600 font-semibold mb-4"><i class="ri-map-pin-line"></i> 32 km from
+                            Tampara Resort</p>
 
                     </div>
                 </div>
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/gopalpur beach.jpg" alt="Gopalpur Beach"
+                    <img loading="lazy" src="images/gopalpur beach.jpg" alt="Gopalpur Beach"
                         class="w-full h-48 object-cover group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -788,7 +831,7 @@
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/tampara lake.jpg" alt="Tampara Lake"
+                    <img loading="lazy" src="images/tampara lake.jpg" alt="Tampara Lake"
                         class="w-full h-48 object-cover group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -807,7 +850,7 @@
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/bhairabi temple.jpg" alt="Bhairabi Temple"
+                    <img loading="lazy" src="images/bhairabi temple.jpg" alt="Bhairabi Temple"
                         class="w-full h-48 object-cover group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -826,7 +869,7 @@
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/balakumari temple.jpg" alt="Balakumari Temple"
+                    <img loading="lazy" src="images/balakumari temple.jpg" alt="Balakumari Temple"
                         class="w-full h-48 object-cover object-top group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -845,7 +888,7 @@
 
                 <div
                     class="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group">
-                    <img src="images/humari beach.jpg" alt="Humari Beach"
+                    <img loading="lazy" src="images/humari beach.jpg" alt="Humari Beach"
                         class="w-full h-48 object-cover group-hover:scale-[1.05] transition duration-500"
                         loading="lazy">
                     <div class="p-6">
@@ -875,32 +918,33 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/gal1.png" alt="Gallery 1"
+                    <img loading="lazy" src="images/gal1.png" alt="Gallery 1"
                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/gal4.png" alt="Gallery 2"
+                    <img loading="lazy" src="images/gal4.png" alt="Gallery 2"
                         class="w-full h-full object-cover object-top group-hover:scale-110 transition duration-300"
                         loading="lazy">
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/gal3.png" alt="Gallery 3"
+                    <img loading="lazy" src="images/gal3.png" alt="Gallery 3"
                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/gal2.png" alt="Gallery 4"
+                    <img loading="lazy" src="images/gal2.png" alt="Gallery 4"
                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="https://i.pinimg.com/736x/e6/79/8e/e6798e6710a8dff38a369f8f6bc660a9.jpg" alt="Gallery 5"
+                    <img loading="lazy" src="https://i.pinimg.com/736x/e6/79/8e/e6798e6710a8dff38a369f8f6bc660a9.jpg"
+                        alt="Gallery 5" class="w-full h-64 object-cover group-hover:scale-110 transition duration-300"
+                        loading="lazy">
+                </div>
+                <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
+                    <img loading="lazy" src="images/lake.png" alt="Gallery 6"
                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
                 </div>
                 <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/lake.png" alt="Gallery 6"
-                        class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
-                </div>
-                <div class="gallery-item rounded-xl overflow-hidden shadow-lg card-hover cursor-pointer group">
-                    <img src="images/gal6.png" alt="Gallery 5"
+                    <img loading="lazy" src="images/gal6.png" alt="Gallery 5"
                         class="w-full h-64 object-cover group-hover:scale-110 transition duration-300" loading="lazy">
                 </div>
             </div>
@@ -1056,68 +1100,75 @@
                 <p class="text-xl text-white/90">Secure your dream vacation at Tampara Resort</p>
             </div>
 
-            <form id="bookingForm" class="bg-white rounded-2xl p-8 shadow-2xl">
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <form id="bookingForm" method="POST" action="form.php" class="bg-white rounded-2xl p-8 shadow-2xl">
+
+                <div class="grid md:grid-cols-3 gap-6 mb-6">
                     <div>
-                        <label class="block text-dark font-bold mb-2">Full Name</label>
-                        <input type="text" id="guestName" required
-                            class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg" placeholder="John Doe">
-                    </div>
-                    <div class="">
-                        <label class="block text-dark font-bold mb-2">Room Type</label>
-                        <select id="roomType" class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg">
-                            <option>Premium Room</option>
-                            <option>Executive Room</option>
-                        </select>
+                        <label class="block font-bold mb-2">Full Name</label>
+                        <input type="text" name="guestName" required class="w-full px-4 py-3 bg-gray-50 rounded-lg"
+                            placeholder="John Doe">
                     </div>
 
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-dark font-bold mb-2">Phone Number</label>
-                        <input type="tel" id="guestPhone" required
-                            class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg" placeholder="+91 0000-0000">
+                        <label class="block font-bold mb-2">Email Address</label>
+                        <input type="email" name="guestEmail" required class="w-full px-4 py-3 bg-gray-50 rounded-lg"
+                            placeholder="example@gmail.com">
                     </div>
+
                     <div>
-                        <label class="block text-dark font-bold mb-2">Number of Guests</label>
-                        <select id="guestCount" class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg">
-                            <option>1 Guest</option>
-                            <option>2 Guests</option>
-                            <option>3 Guests</option>
-                            <option>4 Guests</option>
-                            <option>5+ Guests</option>
+                        <label class="block font-bold mb-2">Room Type</label>
+                        <select name="roomType" class="w-full px-4 py-3 bg-gray-50 rounded-lg">
+                            <option value="Premium Room">Premium Room</option>
+                            <option value="Executive Room">Executive Room</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-6 mb-6">
                     <div>
-                        <label class="block text-dark font-bold mb-2">Check-In Date</label>
-                        <input type="date" id="checkInDate" required
-                            class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg">
+                        <label class="block font-bold mb-2">Phone Number</label>
+                        <input type="tel" name="guestPhone" required class="w-full px-4 py-3 bg-gray-50 rounded-lg"
+                            placeholder="+91 0000-0000">
                     </div>
+
                     <div>
-                        <label class="block text-dark font-bold mb-2">Check-Out Date</label>
-                        <input type="date" id="checkOutDate" required
-                            class="w-full form-input px-4 py-3 bg-gray-50 rounded-lg">
+                        <label class="block font-bold mb-2">Number of Guests</label>
+                        <select name="guestCount" class="w-full px-4 py-3 bg-gray-50 rounded-lg">
+                            <option value="1 Guest">1 Guest</option>
+                            <option value="2 Guests">2 Guests</option>
+                            <option value="3 Guests">3 Guests</option>
+                            <option value="4 Guests">4 Guests</option>
+                            <option value="5+ Guests">5+ Guests</option>
+                        </select>
                     </div>
                 </div>
 
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block font-bold mb-2">Check-In Date</label>
+                        <input type="date" name="checkInDate" required class="w-full px-4 py-3 bg-gray-50 rounded-lg">
+                    </div>
 
+                    <div>
+                        <label class="block font-bold mb-2">Check-Out Date</label>
+                        <input type="date" name="checkOutDate" required class="w-full px-4 py-3 bg-gray-50 rounded-lg">
+                    </div>
+                </div>
 
                 <div class="mb-8">
-                    <label class="block text-dark font-bold mb-2">Special Requests</label>
-                    <textarea id="specialRequests"
-                        class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200 focus:border-blue-600 focus:outline-none"
-                        rows="4" placeholder="Any special requests or dietary preferences..."></textarea>
+                    <label class="block font-bold mb-2">Special Requests</label>
+                    <textarea name="specialRequests"
+                        class="w-full px-4 py-3 bg-gray-50 rounded-lg border border-gray-200" rows="4"
+                        placeholder="Any special requests or dietary preferences..."></textarea>
                 </div>
 
                 <button type="submit"
-                    class="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg rounded-lg hover:shadow-lg transition duration-300 transform hover:scale-105 btn-ripple">
-                    Send Enquiry via WhatsApp
+                    class="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg rounded-lg">
+                    Send Enquiry
                 </button>
+
             </form>
+
         </div>
     </section>
 
@@ -1150,7 +1201,7 @@
                         <h3 class="text-2xl font-bold text-[#0B4799] mb-4">Send Us a Message</h3>
                         <p class="text-gray-600 mb-4">For reservations or special requests, please use the form below.
                         </p>
-                        <a  href="#bookingForm"
+                        <a href="#bookingForm"
                             class="w-full bg-[#FE7303] text-white py-3 rounded-lg font-semibold hover:bg-[#C75B00] transition shadow-md">
                             Submit Inquiry
                         </a>
@@ -1214,7 +1265,7 @@
 
                 <div>
                     <div class="flex items-center space-x-2 mb-4">
-                        <img class="w-40 h-auto" src="images/logo.png" alt="">
+                        <img loading="lazy" class="w-40 h-auto" src="images/logo.png" alt="">
                     </div>
                     <p class="text-gray-400">Luxury Lakeside resort for unforgettable vacations.</p>
                 </div>
@@ -1263,19 +1314,6 @@
         </div>
     </footer>
 
-
-    <!-- Success Modal -->
-    <div class="modal" id="successModal">
-        <div class="bg-white rounded-2xl p-8 max-w-md w-full mx-4 text-center shadow-2xl">
-            <i class="ri-check-circle-line text-6xl text-green-500 mb-4"></i>
-            <h3 class="text-2xl font-bold text-dark mb-2">Booking Sent!</h3>
-            <p class="text-gray-600 mb-6">Your enquiry has been sent to our WhatsApp. We'll respond shortly with
-                confirmation and details.</p>
-            <button onclick="closeModal()"
-                class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-bold">Close</button>
-        </div>
-    </div>
-
     <!-- Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -1284,16 +1322,7 @@
         // ==================== GSAP Setup ====================
         gsap.registerPlugin(ScrollTrigger);
 
-        // Preloader
-        window.addEventListener('load', () => {
-            gsap.to('#preloader', {
-                opacity: 0,
-                duration: 0.8,
-                onComplete: () => {
-                    document.getElementById('preloader').style.display = 'none';
-                }
-            });
-        });
+
 
         // Hero animations
         gsap.fromTo('.hero-headline', {
@@ -1376,126 +1405,6 @@
             }
         }
 
-        // ==================== Swiper Sliders ====================
-        const roomsSwiper = new Swiper('.roomsSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: true,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                }
-            }
-        });
-
-        const testimonialSwiper = new Swiper('.testimonialSwiper', {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: true,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                }
-            }
-        });
-
-        // ==================== Form Validation & Submission ====================
-        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-
-            // Get form values
-            const name = document.getElementById('guestName').value.trim();
-            const phone = document.getElementById('guestPhone').value.trim();
-            const guestCount = document.getElementById('guestCount').value;
-            const checkInDate = document.getElementById('checkInDate').value;
-            const checkOutDate = document.getElementById('checkOutDate').value;
-            const roomType = document.getElementById('roomType').value;
-            const specialRequests = document.getElementById('specialRequests').value.trim();
-
-            // Validation
-            if (!name || name.length < 2) {
-                alert('Please enter a valid name');
-                return;
-            }
-
-
-
-            if (!phone || phone.length < 10) {
-                alert('Please enter a valid phone number');
-                return;
-            }
-
-            if (!checkInDate || !checkOutDate) {
-                alert('Please select check-in and check-out dates');
-                return;
-            }
-
-            // Create WhatsApp message
-            const message = `*Tampara Resort Booking Enquiry*
-
-Name: ${name}
-Phone: ${phone}
-Guests: ${guestCount}
-Check-in: ${checkInDate}
-Check-out: ${checkOutDate}
-Room Type: ${roomType}
-Special Requests: ${specialRequests || 'None'}
-
-Please confirm availability and send further details.`;
-
-            // Encode for WhatsApp
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappLink = `https://wa.me/9124084003?text=${encodedMessage}`;
-
-            // Open WhatsApp
-            window.open(whatsappLink, '_blank');
-
-            // Show success modal
-            showModal();
-
-            // Reset form
-            document.getElementById('bookingForm').reset();
-        });
-
-        // ==================== Modal Functions ====================
-        function showModal() {
-            document.getElementById('successModal').classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('successModal').classList.remove('active');
-        }
-
-        // Close modal on overlay click
-        document.getElementById('successModal').addEventListener('click', (e) => {
-            if (e.target.id === 'successModal') {
-                closeModal();
-            }
-        });
 
         // ==================== Button Ripple Effect ====================
         document.querySelectorAll('.btn-ripple').forEach(button => {
@@ -1518,9 +1427,9 @@ Please confirm availability and send further details.`;
         });
 
         // ==================== Set Minimum Date for Booking ====================
-        const today = new Date().toISOString().split('T')[0];
-        document.getElementById('checkInDate').setAttribute('min', today);
-        document.getElementById('checkOutDate').setAttribute('min', today);
+        // const today = new Date().toISOString().split('T')[0];
+        // document.getElementById('checkInDate').setAttribute('min', today);
+        // document.getElementById('checkOutDate').setAttribute('min', today);
 
 
         if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined' && !gsap.plugins.scrollTrigger) {
@@ -1580,6 +1489,30 @@ Please confirm availability and send further details.`;
                 el: ".swiper-pagination",
                 clickable: true,
             },
+        });
+
+        const heroSwiper = new Swiper(".heroSwiper", {
+            loop: true,
+            spaceBetween: 20,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            breakpoints: {
+                // Mobile
+                0: {
+                    slidesPerView: 1,
+                },
+                // Desktop
+                1024: {
+                    slidesPerView: 1,
+                }
+            }
         });
     </script>
 </body>
