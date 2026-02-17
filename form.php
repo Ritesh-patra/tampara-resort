@@ -98,10 +98,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $mail->send();
 
-        echo "<script>
-                alert('Booking enquiry sent successfully!');
-                window.location.href='index.html';
-              </script>";
+    header("Location: thankyou.html");
+    exit();
+
 
     } catch (Exception $e) {
         echo "Mailer Error: {$mail->ErrorInfo}";
